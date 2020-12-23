@@ -1,5 +1,5 @@
 # Identifiability constraints in spatio-temporal areal models
-This repository contains the R code to fit the spatio-temporal conditional autoregressive (CAR) models in INLA considering different types of interactions described in _"In spatio-temporal disease mapping models, identifiability constraints affect PQL and INLA results"_ (Goicoa et al., 2018).
+This repository contains the R code to fit the spatio-temporal conditional autoregressive (CAR) models in INLA considering different types of interactions described in _"In spatio-temporal disease mapping models, identifiability constraints affect PQL and INLA results"_ [(Goicoa et al., 2018)](https://doi.org/10.1007/s00477-017-1405-0).
 
 
 ## Table of contents
