@@ -1,5 +1,5 @@
 # Identifiability constraints in spatio-temporal areal models
-This repository contains the R code to fit with INLA the spatio-temporal models described in _"In spatio-temporal disease mapping models, identifiability constraints affect PQL and INLA results"_ [(Goicoa et al., 2018)](https://doi.org/10.1007/s00477-017-1405-0).
+This repository contains the R code to fit in INLA the spatio-temporal models described in _"In spatio-temporal disease mapping models, identifiability constraints affect PQL and INLA results"_ [(Goicoa et al., 2018)](https://doi.org/10.1007/s00477-017-1405-0).
 
 
 ## Table of contents
