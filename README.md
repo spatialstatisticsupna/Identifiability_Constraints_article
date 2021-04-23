@@ -42,7 +42,7 @@ R code to fit with INLA (http://www.r-inla.org/) the spatio-temporal CAR models 
   
 
 # Acknowledgements
-This work has been supported by the Spanish Ministry of Economy and Competitiveness (project MTM2014-51992-R), and by the Health Department of the Navarre Government (Project 113, Res.2186/2014). We would like to thank the National Epidemiology Center (area of Environmental Epidemiology andCancer) for providing the data, originally created by the Spanish Statistical Office.
+This work has been supported by the Spanish Ministry of Economy and Competitiveness (project MTM2014-51992-R), and by the Health Department of the Navarre Government (Project 113, Res.2186/2014).
 
 
 # References
