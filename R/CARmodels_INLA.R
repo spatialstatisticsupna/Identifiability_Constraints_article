@@ -238,7 +238,6 @@ R <- kronecker(Q.gammaRW2,Q.xi)
 r.def <- 2*S+T-2
 A1 <- kronecker(matrix(1,1,T),diag(S))
 A2 <- kronecker(diag(T),matrix(1,1,S))
-A.constr <- rbind(A1,A2)
 A.constr <- rbind(A1[-1,],A2[-1,])
 
 f.TypeIV.RW2 <- O ~ f(ID.area, model="generic1", Cmatrix=Q.Leroux, constr=TRUE,
