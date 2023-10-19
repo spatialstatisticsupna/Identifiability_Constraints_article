@@ -9,6 +9,8 @@ library(sf)
 # install.packages("INLA",repos=c(getOption("repos"),INLA="https://inla.r-inla-download.org/R/testing"), dep=TRUE)
 library(INLA)
 
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+
 
 ####################################################
 ##  Load the original data              				  ##
@@ -48,7 +50,7 @@ for (i in 1:g$n){
   Q.xi[i,i]=g$nnbs[[i]]
   Q.xi[i,g$nbs[[i]]]=-1
 }
-
+Q.xi <- as(Q.xi,"Matrix")
 Q.Leroux <- diag(S)-Q.xi
 
 
@@ -56,10 +58,10 @@ Q.Leroux <- diag(S)-Q.xi
 ##  Define the temporal structure matrix of a RW1/RW2  ##
 #########################################################
 D1 <- diff(diag(T),differences=1)
-Q.gammaRW1 <- t(D1)%*%D1
+Q.gammaRW1 <- as(t(D1)%*%D1,"Matrix")
 
 D2 <- diff(diag(T),differences=2)
-Q.gammaRW2 <- t(D2)%*%D2
+Q.gammaRW2 <- as(t(D2)%*%D2,"Matrix")
 
 
 ######################################################################################

@@ -82,7 +82,7 @@ t.to <- max(Data$Year)
 
 ## Posterior mean estimates of the spatial pattern ##
 Carto_ESP$spatial.risk <- unlist(lapply(Model$marginals.lincomb.derived[2:(S+1)], function(x) inla.emarginal(exp,x)))
-                                           
+
 color.pal <- brewer.pal(6,"RdYlGn")[6:1]
 values <- c(0.77,0.83,0.91,1,1.1,1.2,1.3)
 
@@ -199,4 +199,3 @@ for(i in plot.areas){
   }
   abline(h=1,lty=2)
 }
-
