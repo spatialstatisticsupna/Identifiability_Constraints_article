@@ -1,5 +1,5 @@
 # Identifiability constraints in spatio-temporal areal models
-This repository contains the R code to fit the spatio-temporal conditional autoregressive (CAR) models in INLA considering different types of interactions described in _"In spatio-temporal disease mapping models, identifiability constraints affect PQL and INLA results"_ (Goicoa et al., 2018).
+This repository contains the R code to fit in INLA the spatio-temporal models described in _"In spatio-temporal disease mapping models, identifiability constraints affect PQL and INLA results"_ [(Goicoa et al., 2018)](https://doi.org/10.1007/s00477-017-1405-0).
 
 
 ## Table of contents
@@ -29,17 +29,21 @@ R code to fit with INLA (http://www.r-inla.org/) the spatio-temporal CAR models 
 
 - [**CARmodels_INLA.R**](https://github.com/spatialstatisticsupna/Identifiability_Constraints_article/blob/master/R/CARmodels_INLA.R)
 
-  Main script that contains the necessary functions to fit the spatio-temporal CAR models in INLA considering different types of interactions. Slight modifications of the original code described in the Appendix section of Goicoa et al. (2018) have been introduced in order to be compatible with the 20.12.10 testing version of INLA. More precisely, we eliminate the redundant constraints in the `extraconstr` argument of the `INLA::inla()` function. 
+  Main script including the required functions to fit in INLA the spatio-temporal CAR models with different types of interactions. Slight modifications of the original code described in the Appendix section of Goicoa et al. (2018) have been introduced in order to be compatible with the 20.12.10 testing version of INLA. More precisely, we eliminate the redundant constraints in the `extraconstr` argument of the `INLA::inla()` function. 
   
 - [**posterior_lincombs.R**](https://github.com/spatialstatisticsupna/Identifiability_Constraints_article/blob/master/R/posterior_lincombs.R)
 
-  Auxiliary script that contains the definition of the posterior marginal distributions of the spatial, temporal and spatio-temporal patterns (Adin et al., 2017) defined as linear combinations of the log-risks using the `INLA::inla.make.lincombs()` function.
+  Auxiliary script including the code to compute the posterior marginal distributions of the spatial, temporal and spatio-temporal patterns (Adin et al., 2017) defined as linear combinations of the log-risks using the `INLA::inla.make.lincombs()` function.
 
 
 - [**Results.R**](https://github.com/spatialstatisticsupna/Identifiability_Constraints_article/blob/master/R/Results.R)
 
   Script to analyse the results of previously fitted INLA models.
   
+
+# Acknowledgements
+This work has been supported by the Spanish Ministry of Economy and Competitiveness (project MTM2014-51992-R), and by the Health Department of the Navarre Government (Project 113, Res.2186/2014).
+
 
 # References
 [Adin, A., Martínez-Beneito, M.A., Botella-Rocamora, P., Goicoa, T., and Ugarte, M.D. (2017). Smoothing and high risk areas detection in space-time disease mapping: a comparison of P-splines, autoregressive, and moving average models. _Stochastic Environmental Research and Risk Assessment_, __31(2)__, 403-415.](https://doi.org/10.1007/s00477-016-1269-8)

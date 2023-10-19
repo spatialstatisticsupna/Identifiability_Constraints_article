@@ -120,7 +120,7 @@ f.TypeI.RW2 <- O ~ f(ID.area, model="generic1", Cmatrix=Q.Leroux, constr=TRUE,
                  hyper=list(prec=list(prior=sdunif))) +
                f(ID.area.year, model="iid", constr=TRUE,
                  hyper=list(prec=list(prior=sdunif)),
-                 extraconstr=list(A=matrix(rep(1:T,S),1,S*T),e=0))
+                 extraconstr=list(A=matrix(rep(1:S,each=T),1,S*T),e=0))
 
 TypeI.RW2 <- inla(f.TypeI.RW2, family="poisson", data=Data.INLA, E=E,
                   control.predictor=list(compute=TRUE, cdf=c(log(1))),
@@ -240,7 +240,6 @@ R <- kronecker(Q.gammaRW2,Q.xi)
 r.def <- 2*S+T-2
 A1 <- kronecker(matrix(1,1,T),diag(S))
 A2 <- kronecker(diag(T),matrix(1,1,S))
-A.constr <- rbind(A1,A2)
 A.constr <- rbind(A1[-1,],A2[-1,])
 
 f.TypeIV.RW2 <- O ~ f(ID.area, model="generic1", Cmatrix=Q.Leroux, constr=TRUE,
